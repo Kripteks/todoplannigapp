@@ -1,5 +1,4 @@
 ﻿using ConsoleTables;
-using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
 using TodoConsoleApp;
 using Application.Interfaces.Services;
@@ -8,15 +7,6 @@ using Infrastructure.Services;
 Console.WriteLine("App Start");
 
 var httpClient = new HttpClient();
-
-var serviceProvider = new ServiceCollection()
-           .AddTransient<ITaskProvider, TaskProvider1>()
-           .BuildServiceProvider();
-
-void Save()
-{
-    
-}
 
 try
 {
